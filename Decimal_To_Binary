@@ -1,0 +1,18 @@
+#include<stdio.h>
+void decTobin(int decnum){
+    int n = decnum;
+    int binnum = 0;
+    int pow = 1;
+    while(n>0){
+        int rem = n%2;
+        binnum += rem*pow;
+        n = n/2;
+        pow = pow*10;
+    }
+    printf("%d",binnum);
+}
+int main(){
+    decTobin(101);
+
+    return 0;
+}
